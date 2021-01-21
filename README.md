@@ -7,10 +7,10 @@
 <a href="https://github.com/bimaadhinirmaNih"><img title="Author" src="https://img.shields.io/badge/AUTHOR-RYONE-orange?style=for-the-badge&logo=github"></a>
 </p>
 <p align="center">
-<a href="https://github.com/bimaadhinirmaNih/Collabv2/followers"><img title="Followers" src="https://img.shields.io/github/followers/bimaadhinirmaNih?style=flat-square"></a>
-<a href="https://github.com/bimaadhinirmaNih/Collabv2/stargazers"><img title="Stars" src="https://img.shields.io/github/stars/bimaadhinirmaNih/Collabv2?style=flat-square"></a>
-<a href="https://github.com/bimaadhinirmaNih/Collabv2/network/members"><img title="Forks" src="https://img.shields.io/github/forks/bimaadhinirmaNih/Collabv2?style=flat-square"></a>
-<a href="https://github.com/bimaadhinirmaNih/Collabv2/watchers"><img title="watchers" src="https://img.shields.io/github/watchers/bimaadhinirmaNih/Collabv2?style=flat-square"></a>
+<a href="https://github.com/Bimaadhinirma/BIMA-BOT/followers"><img title="Followers" src="https://img.shields.io/github/followers/bimaadhinirmaNih?style=flat-square"></a>
+<a href="https://github.com/Bimaadhinirma/BIMA-BOT/stargazers"><img title="Stars" src="https://img.shields.io/github/stars/Bimaadhinirma/BIMA-BOT?style=flat-square"></a>
+<a href="https://github.com/Bimaadhinirma/BIMA-BOT/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Bimaadhinirma/BIMA-BOT?style=flat-square"></a>
+<a href="https://github.com/Bimaadhinirma/BIMA-BOT/watchers"><img title="watchers" src="https://img.shields.io/github/watchers/Bimaadhinirma/BIMA-BOT?style=flat-square"></a>
 </p>
 
 <img src="https://media4.giphy.com/media/qLFKvOpoS1N7ts7xO8/giphy.gif">
@@ -34,14 +34,14 @@
 ---
 
 ## Information
-- Change vcard contacts name on [this section](https://github.com/bimaadhinirmaNih/Collabv2/blob/main/index.js#L33)
-- Change vcard bot name on [this section](https://github.com/bimaadhinirmaNih/Collabv2/blob/main/index.js#L34)
-- Change vcard WhatsApp id on [this section](https://github.com/bimaadhinirmaNih/Collabv2/blob/main/index.js#L35)
-- Change vcard WhatsApp number on [this section](https://github.com/bimaadhinirmaNih/Collabv2/blob/main/index.js#L35)
-- Change owner number id on [this section](https://github.com/bimaadhinirmaNih/Collabv2/blob/main/index.js#L153)
-- Change menu bot name on [this section](https://github.com/bimaadhinirmaNih/Collabv2/blob/main/src/help.js#L3)
-- Change menu owner name on [this section](https://github.com/bimaadhinirmaNih/Collabv2/blob/main/src/help.js#L7)
-- Change menu owner name2 on [this section](https://github.com/bimaadhinirmaNih/Collabv2/blob/main/src/help.js#125)
+- Change vcard contacts name on [this section](https://github.com/Bimaadhinirma/BIMA-BOT/blob/main/index.js#L33)
+- Change vcard bot name on [this section](https://github.com/Bimaadhinirma/BIMA-BOT/blob/main/index.js#L34)
+- Change vcard WhatsApp id on [this section](https://github.com/Bimaadhinirma/BIMA-BOT/blob/main/index.js#L35)
+- Change vcard WhatsApp number on [this section](https://github.com/Bimaadhinirma/BIMA-BOT/blob/main/index.js#L35)
+- Change owner number id on [this section](https://github.com/Bimaadhinirma/BIMA-BOT/blob/main/index.js#L153)
+- Change menu bot name on [this section](https://github.com/Bimaadhinirma/BIMA-BOT/blob/main/src/help.js#L3)
+- Change menu owner name on [this section](https://github.com/Bimaadhinirma/BIMA-BOT/blob/main/src/help.js#L7)
+- Change menu owner name2 on [this section](https://github.com/Bimaadhinirma/BIMA-BOT/blob/main/src/help.js#125)
 
 ---
 
