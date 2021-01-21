@@ -1,7 +1,7 @@
 ### Moshi Moshi~ I'm bimaadhinirma<img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Hi.gif" width="27px">
 
 <p align="center">
-<a href="#"><img title="Collab-Bot" src="https://img.shields.io/badge/-BIMA-BOT-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
+<a href="#"><img title="Collab-Bot" src="https://img.shields.io/badge/-COLLAB-BOT-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
 <p align="center">
 <a href="https://github.com/bimaadhinirmaNih"><img title="Author" src="https://img.shields.io/badge/AUTHOR-BIMA-orange?style=for-the-badge&logo=github"></a>

@@ -80,13 +80,13 @@ const { othermenu } require('./database/menu/othermenu')*/
 /******LOAD OF VCARD INPUT******/
 const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
             + 'VERSION:3.0\n'
-            + 'FN:BIMA🗿\n' // full name
+            + 'FN:Ryone🗿\n' // full name
             + 'ORG:Owner Bot;\n' // the organization of the contact
-            + 'TEL;type=CELL;type=VOICE;waid=62822268263264:+62 822-6826-3264\n' // WhatsApp ID + phone number
+            + 'TEL;type=CELL;type=VOICE;waid=6282157581762:+62 821-5758-1762\n' // WhatsApp ID + phone number
             + 'END:VCARD'
 /******END OF VCARD INPUT******/
 
-prefix = '#'
+prefix = '!'
 blocked = []
 
 /******BEGIN OF FUNCTIONS INPUT******/
@@ -783,6 +783,22 @@ case 'infogc':
 					client.sendMessage(from, '10 Detik lagi', text) // ur cods
 					}, 0) // 1000 = 1s,
 					break
+				case 'semoji':
+					if (args.length < 1) return reply('emojinya mana um?')
+                                        if (!isUser) return reply(mess.only.daftarB)
+					ranp = getRandom('.png')
+					rano = getRandom('.webp')
+					teks = body.slice(8).trim()
+					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/emoji2png?emoji=${teks}`, {method: 'get'})
+					if (anu.error) return reply(anu.error)
+					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+						fs.unlinkSync(ranp)
+						if (err) return reply(mess.error.stick)
+						buffer = fs.readFileSync(rano)
+						client.sendMessage(from, buffer, sticker)
+						fs.unlinkSync(rano)
+					})
+					break
 				case 'nulis':
 				case 'tulis': 
 					if (args.length < 1) return reply('aku suruh nulis apa kak?')
@@ -946,6 +962,11 @@ case 'infogc':
 					if (!isOwner) return reply(mess.only.ownerB)
 					client.blockUser (`${body.slice(8)}@c.us`, "add")
 					client.sendMessage(from, `perintah Diterima, memblokir ${body.slice(8)}@c.us`, text)
+					break
+				case 'hilih':
+					client.updatePresence(from, Presence.composing) 
+					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/hilih?teks=${body.slice(7)}`, {method: 'get'})
+					reply(anu.result)
 					break
 				case 'tagall':
 				client.updatePresence(from, Presence.composing) 
@@ -1402,7 +1423,7 @@ case 'infogc':
                       break
                          case 'play':
                 reply(mess.wait)
-                anu = await fetchJson(`https://mhankbarbar.tech/api/ytsearch?q=${body.slice(6)}&apiKey=Nkwp9oR7Eg9yyKbejBpm`)
+                anu = await fetchJson(`https://mhankbarbar.tech/api/ytsearch?q=${body.slice(6)}&apikey=Nkwp9oR7Eg9yyKbejBpm`)
                if (!isUser) return reply(mess.only.daftarB)
                if (anu.error) return reply(anu.error)
                  infomp3 = `*Lagu Ditemukan!!!*\nJudul : ${anu.result.title}\nDurasi : ${anu.result.duration}\n\n*TUNGGU SEBENTAR LAGI DIKIRIM MOHON JANGAN SPAM YA SAYANG*`
@@ -1632,6 +1653,16 @@ case 'infogc':
                                         if (!isUser) return reply(mess.only.daftarB)
 					if (!isGroupAdmins)return reply(mess.only.admin)
 					client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
+					break
+                                case 'phlogo':
+					var gh = body.slice(9)
+					var gbl1 = gh.split("|")[0];
+					var gbl2 = gh.split("|")[1];
+					if (args.length < 1) return reply('Teksnya mana um\nContoh: ${prefix}phlogo |Nazwa|Canss')
+					reply(mess.wait)
+					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/textpro?theme=pornhub&text1=${gbl1}&text2=${gbl2}`, {method: 'get'})
+					buffer = await getBuffer(anu.result)
+					client.sendMessage(from, buffer, image, {quoted: mek})
 					break
                 case 'truth':
 					const trut =['Pernah suka sama siapa aja? berapa lama?','Kalau boleh atau kalau mau, di gc/luar gc siapa yang akan kamu jadikan sahabat?(boleh beda/sma jenis)','apa ketakutan terbesar kamu?','pernah suka sama orang dan merasa orang itu suka sama kamu juga?','Siapa nama mantan pacar teman mu yang pernah kamu sukai diam diam?','pernah gak nyuri uang nyokap atau bokap? Alesanya?','hal yang bikin seneng pas lu lagi sedih apa','pernah cinta bertepuk sebelah tangan? kalo pernah sama siapa? rasanya gimana brou?','pernah jadi selingkuhan orang?','hal yang paling ditakutin','siapa orang yang paling berpengaruh kepada kehidupanmu','hal membanggakan apa yang kamu dapatkan di tahun ini','siapa orang yang bisa membuatmu sange','siapa orang yang pernah buatmu sange','(bgi yg muslim) pernah ga solat seharian?','Siapa yang paling mendekati tipe pasangan idealmu di sini','suka mabar(main bareng)sama siapa?','pernah nolak orang? alasannya kenapa?','Sebutkan kejadian yang bikin kamu sakit hati yang masih di inget','pencapaian yang udah didapet apa aja ditahun ini?','kebiasaan terburuk lo pas di sekolah apa?']
